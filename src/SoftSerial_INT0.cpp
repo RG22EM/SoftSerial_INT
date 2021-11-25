@@ -252,6 +252,11 @@ ISR(INT0_vect)
 	SoftSerial::handle_interrupt();
 }
 
+ISR(INT1_vect)
+{
+	SoftSerial::handle_interrupt();
+}
+
 // Constructor
 SoftSerial::SoftSerial(uint8_t receivePin, uint8_t transmitPin, bool inverse_logic /* = false */) : 
 _rx_delay_centering(0),
